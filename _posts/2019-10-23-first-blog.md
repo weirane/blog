@@ -2,7 +2,6 @@
 title: 第一篇博客
 tags: jekyll
 redirect_from: /p/0
-mathjax: true
 ---
 
 这个博客使用 [jekyll] 构建加上 [minimal mistakes][minimistake] 主题的 `dirt` [皮肤][skin]。源代码在 [GitHub][gh-source] 上，用 Travis CI 自动部署到 GitHub Pages：[![Build Status](https://travis-ci.org/weirane/blog.svg?branch=master)](https://travis-ci.org/weirane/blog)。
