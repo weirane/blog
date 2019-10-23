@@ -1,0 +1,9 @@
+language: ruby
+cache: bundler
+sudo: false
+env:
+    - JEKYLL_ENV=production
+
+script: bundle exec jekyll build
+
+after_success: ./script/travis.sh
