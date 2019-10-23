@@ -17,7 +17,7 @@ url: "https://weirane.github.io"
 baseurl: "/"
 repository: "weirane/blog"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo: "/assets/images/avatar.png" # path of logo image to display in the masthead
+logo: # path of logo image to display in the masthead
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs: false # true, false (default)
 words_per_minute: 200
@@ -100,7 +100,7 @@ analytics:
 # Site Author
 author:
     name: "weirane"
-    avatar: "/assets/images/avatar.png"
+    avatar: "/images/avatar.png"
     bio: ""
     location: "Anhui, China"
     email:
@@ -261,6 +261,7 @@ defaults:
         type: posts
       values:
           layout: single
+          classes: wide
           author_profile: true
           read_time: true
           comments: # true
