@@ -114,9 +114,6 @@ author:
         - label: "GitHub"
           icon: "fab fa-fw fa-github"
           url: "https://github.com/weirane"
-        - label: "Telegram Channel"
-          icon: "fab fa-fw fa-telegram"
-          url: "https://t.me/wrc_notebook"
 
 # Site Footer
 footer:
