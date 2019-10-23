@@ -204,7 +204,6 @@ plugins:
     - jekyll-seo-tag
     - jekyll-relative-links
     - jekyll-redirect-from
-    - jekyll-algolia
     - jekyll-archives
     - jemoji
 
