@@ -14,7 +14,7 @@ subtitle: # site tagline that appears below site title in masthead
 name: "Wang Ruochen"
 description: "weirane's blog"
 url: "https://weirane.github.io"
-baseurl: "/"
+baseurl: ""
 repository: "weirane/blog"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead
@@ -145,6 +145,7 @@ exclude:
     - Capfile
     - config
     - Gemfile
+    - Gemfile.lock
     - Gruntfile.js
     - gulpfile.js
     - LICENSE
