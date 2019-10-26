@@ -1,6 +1,7 @@
 ---
 title: AutoCompleters I Use in Vim
-tags: tools
+category: Tools
+tags: vim
 redirect_from: /p/1
 ---
 
