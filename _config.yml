@@ -267,3 +267,14 @@ defaults:
           comments: # true
           share: false
           related: true
+    - scope:
+        path: ""
+        type: drafts
+      values:
+          layout: single
+          classes: wide
+          author_profile: true
+          read_time: true
+          comments: # true
+          share: false
+          related: true
