@@ -2,6 +2,12 @@
 set -x
 
 cd _site
+cat >README.md <<EOF
+Automatically built by Travis CI.
+[![Build Status](https://travis-ci.org/weirane/blog.svg)](https://travis-ci.org/weirane/blog)
+
+The source is [here](https://github.com/weirane/blog).
+EOF
 git init
 git config user.name "Travis CI"
 git config user.email "travis@travis-ci.org"
