@@ -1,5 +1,6 @@
 ---
 title: 第一篇博客
+description: The first blog, an explantion of how this blog is set up
 tags: jekyll
 redirect_from: /p/0
 ---
