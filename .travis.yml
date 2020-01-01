@@ -1,6 +1,7 @@
 language: ruby
 cache: bundler
 sudo: false
+dist: bionic
 env:
     - JEKYLL_ENV=production
 
