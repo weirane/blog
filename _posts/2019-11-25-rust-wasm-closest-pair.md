@@ -2,7 +2,6 @@
 title: "Rust + WebAssembly: 最近点对问题"
 description: A Rust + WebAssembly demo of the closest point problem
 toc: true
-read_time: false
 category: Programming
 tags: rust wasm
 redirect_from: /r/2
