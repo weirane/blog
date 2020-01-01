@@ -5,7 +5,7 @@ toc: true
 read_time: false
 category: Programming
 tags: rust wasm
-redirect_from: /p/2
+redirect_from: /r/2
 ---
 
 先放 [链接][gh-pages]。这个项目一开始是算法课的一个上机作业，[平面上的最近点对问题]。这是一个使用分治法的计算几何学问题，具体的算法就不在这里解释了，这篇博客主要讲讲 Rust 和 WebAssembly。

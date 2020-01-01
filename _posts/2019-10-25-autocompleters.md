@@ -4,7 +4,7 @@ description: My experiences with YouCompleteMe and TabNine
 toc: true
 category: Tools
 tags: vim
-redirect_from: /p/1
+redirect_from: /r/1
 ---
 
 At the start, I should point out that this blog will not be a tutorial of how to install, configure or use an autocompleter in vim --- there are a plenty of them on the web. But if you are interested in my configurations under linux, you are welcome to visit my [dotfiles] repository.
