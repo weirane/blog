@@ -12,6 +12,10 @@ redirect_from: /r/3
 [i3-gaps]: https://github.com/Airblader/i3
 [manjaro-i3]: https://manjaro.org/download/#i3
 
+---
+
+2020-01-23 更新：增加了 [多显示器](#多显示器) 一节。
+
 ## 安装
 `i3-wm` 和 `i3-gaps` 这两个包都提供 i3 window manager，而且它们互相冲突。由于我在虚拟机中体验的是 `i3-gaps` 所以这里就用了 `i3-gaps` 这个版本。
 
@@ -148,6 +152,11 @@ echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
 重启或注销再登录即可看到效果。
 
 [touchpad]: https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
+
+### 多显示器
+配置多个显示器可以使用 [`xrandr`] 工具。图形化的配置工具可以使用 `arandr` 这个包。
+
+[`xrandr`]: https://wiki.archlinux.org/index.php/Xrandr
 
 ### 锁屏
 想要达到以下的效果：
