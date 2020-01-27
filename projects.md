@@ -14,6 +14,6 @@ Other misc:
 - [dotfiles][dotfiles]{:target="_blank"}: My configurations for vim, zsh, tmux and more.
 
 [bienum]: https://github.com/weirane/bienum
-[cp-wasm]: https://github.com/weirane/closest-pair-wasm
+[cp-wasm]: https://weirane.github.io/closest-pair-wasm
 [gadgets]: https://github.com/weirane/gadgets
 [dotfiles]: https://github.com/weirane/dotfiles
