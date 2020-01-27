@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "jekyll", '~> 3.8.6'
-gem "minimal-mistakes-jekyll", '~> 4.17.2'
+gem "minimal-mistakes-jekyll", '~> 4.18.1'
 
 gem "faraday", '~> 0.17' # 1.0 is incompatible
 
