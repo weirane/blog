@@ -2,6 +2,7 @@
 title: 第一篇博客
 description: The first blog, an explantion of how this blog is set up
 tags: jekyll
+toc: false
 redirect_from: /r/0
 ---
 

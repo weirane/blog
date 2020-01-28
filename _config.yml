@@ -261,6 +261,8 @@ defaults:
         type: posts
       values:
           layout: single
+          toc: true
+          toc_sticky: true
           author_profile: false
           read_time: true
           comments: # true
@@ -271,6 +273,8 @@ defaults:
         type: drafts
       values:
           layout: single
+          toc: true
+          toc_sticky: true
           author_profile: false
           read_time: true
           comments: # true

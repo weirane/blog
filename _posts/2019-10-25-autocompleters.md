@@ -1,7 +1,6 @@
 ---
 title: AutoCompleters I Use in Vim
 description: My experiences with YouCompleteMe and TabNine
-toc: true
 category: Tools
 tags: vim
 redirect_from: /r/1

@@ -1,7 +1,6 @@
 ---
 title: 从 GNOME 迁移到 i3
 description: Switching from GNOME to i3
-toc: true
 category: I3
 tags: i3 dotfiles
 redirect_from: /r/3
