@@ -122,12 +122,11 @@ echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
     add control = Caps_Lock Control_L Control_R
     keycode 66 = Control_L Control_L Control_L Control_L
 
-然后在 `~/.xinitrc` 中加入 `xmodmap ~/.Xmodmap`。
+然后在 `~/.xinitrc` 中加入 `xmodmap ~/.Xmodmap`。这样设置之后就无法通过键盘中的某一个键实现 CapsLock 了，如果需要的话可以使用 `xdotool key Caps_Lock` 命令来触发。
 
 值得注意的是用这种方法对执行 `xmodmap` 命令后连接的键盘没有效果。经过一番调研[^1]<sup>,</sup>[^2]，一个解决方案是使用 `inotifywait` 监控 `/dev/input` 中的新设备并在有新设备时执行 `xmodmap` 命令，写一个 [脚本][auto-xmodmap] 并设置自动启动即可。
 
-<!-- TODO: use link from dotfiles repo -->
-[auto-xmodmap]: https://gist.github.com/weirane/ede938648f32f02dbbb9003324adb986
+[auto-xmodmap]: https://github.com/weirane/dotfiles/blob/master/dotconfig/i3/scripts/xmodmap-on-new-input.sh
 [^1]: 这个 bug report 的最后一个 comment：<https://bugs.launchpad.net/ubuntu/+source/xorg-server/+bug/287215>
 [^2]: <https://bugs.freedesktop.org/show_bug.cgi?id=25262#c3>
 
@@ -167,11 +166,10 @@ echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
 
     exec --no-startup-id xss-lock -n /path/to/dim-screen.sh -- /path/to/lock.sh -i
 
-[dim-screen.sh][dim-screen] 来自 xss-lock 的仓库，[lock.sh][locksh] 如链接。
+[dim-screen.sh][dim-screen] 修改自 xss-lock 的仓库，[lock.sh][locksh] 如链接。
 
-<!-- TODO: use link from dotfiles repo -->
-[dim-screen]: https://bitbucket.org/raymonad/xss-lock/src/master/doc/dim-screen.sh
-[locksh]: https://gist.github.com/weirane/1c933d70a4f7edec6b124de589d457d0
+[dim-screen]: https://github.com/weirane/dotfiles/blob/master/dotconfig/i3/scripts/dim-screen.sh
+[locksh]: https://github.com/weirane/dotfiles/blob/master/dotconfig/i3/scripts/lock.sh
 
 [DPMS]: https://wiki.archlinux.org/index.php/Display_Power_Management_Signaling
 
