@@ -10,6 +10,10 @@ redirect_from: /r/2
 
 [平面上的最近点对问题]: https://en.wikipedia.org/wiki/Closest_pair_of_points_problem
 
+---
+
+2020-02-08 更新：增加了 [更好的解决方案](#更好的解决方案) 一节。
+
 ## Rust
 先说说在这个项目中我学到的关于 Rust 的东西吧。
 
@@ -124,6 +128,27 @@ impl WasmApp {
 这样在 JavaScript 中只需调用 `WasmApp` 的方法，不再需要分开存储点的坐标了。不过因为目前无法返回一个 tuple，所以返回值还是只能通过 `WasmApp` 的属性获得。
 
 [wasm-bindgen guide]: https://rustwasm.github.io/docs/wasm-bindgen/reference/types/result.html
+
+### 更好的解决方案
+在 WebAssembly 中不止可以调用全局的 JavaScript 函数，还可以调用自己写的函数。所以可将唯一需要计算结果的地方，即将结果画在 canvas 上的这个过程封装成一个 JavaScript 函数，导入 Rust 并在计算完毕后调用这个函数，这样就不需要将计算的结果传回 JavaScript 了。
+```rust
+#[wasm_bindgen(module = "/www/present.js")]
+extern "C" {
+    #[wasm_bindgen(js_name = presentResult)]
+    fn present_result(dist: f64, p0_x: f64, p0_y: f64, p1_x: f64, p1_y: f64);
+}
+```
+`module` 路径写法的详细解释见 [文档][module-path]，这里开头的 `/` 相对于项目的根目录。
+
+`www/present.js` 要写成一个 ES module, 即
+```javascript
+export function presentResult(dist, p0_x, p0_y, p1_x, p1_y) {
+    // ...
+}
+```
+这样在 Rust 中使用 `present_result(...)` 即可达到在 JavaScript 中调用 `presentResult` 的效果。`WasmApp` 中除了 `points` 之外的域都可以删除了。
+
+[module-path]: https://rustwasm.github.io/docs/wasm-bindgen/reference/js-snippets.html
 
 ## 部署
 这个项目使用 [webpack] 部署 WebAssembly 应用，webpack 也是官网的 [tutorial] 使用的工具。用命令 `npm build` 即可得到 `dist` 目录，将其复制到目标服务器上即可。还要注意的是目标服务器需要将 `*.wasm` 的 MIME 类型设置为 `application/wasm`。我使用了一个与此博客类似的 Travis CI 配置来自动地在我向此项目的 [仓库][repo] push 的时候编译并部署到 [GitHub Pages][gh-pages] 上。
