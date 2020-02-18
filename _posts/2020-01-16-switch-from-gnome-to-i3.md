@@ -101,6 +101,13 @@ image/png=sxiv.desktop
 ### 连接 WiFi、蓝牙
 安装 `network-manager-applet` 和 `blueman`，再设置自动启动 `nm-applet` 和 `blueman-applet` 即可，重新登录（或者手动启动这两个程序）即可在系统托盘看到对应的菜单。
 
+开机时自动打开蓝牙：编辑文件 `/etc/bluetooth/main.conf`，将 `[Policy]` 一节中的 `AutoEnable` 设置为 true：
+
+```ini
+[Policy]
+AutoEnable=true
+```
+
 ### Disable beeps
 根据 [Arch Wiki][disble-beep]，使用命令
 ```sh
@@ -124,7 +131,11 @@ echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
 
 然后在 `~/.xinitrc` 中加入 `xmodmap ~/.Xmodmap`。这样设置之后就无法通过键盘中的某一个键实现 CapsLock 了，如果需要的话可以使用 `xdotool key Caps_Lock` 命令来触发。
 
-值得注意的是用这种方法对执行 `xmodmap` 命令后连接的键盘没有效果。经过一番调研[^1]<sup>,</sup>[^2]，一个解决方案是使用 `inotifywait` 监控 `/dev/input` 中的新设备并在有新设备时执行 `xmodmap` 命令，写一个 [脚本][auto-xmodmap] 并设置自动启动即可。
+<div class="notice--info" markdown="1">
+<i class="fas fa-exclamation-circle"></i> **注意！**
+
+用这种方法对执行 `xmodmap` 命令后连接的键盘没有效果。经过一番调研[^1]<sup>,</sup>[^2]，一个解决方案是使用 `inotifywait` 监控 `/dev/input` 中的新设备并在有新设备时执行 `xmodmap` 命令，写一个 [脚本][auto-xmodmap] 并设置自动启动即可。
+</div>
 
 [auto-xmodmap]: https://github.com/weirane/dotfiles/blob/master/dotconfig/i3/scripts/xmodmap-on-new-input.sh
 [^1]: 这个 bug report 的最后一个 comment：<https://bugs.launchpad.net/ubuntu/+source/xorg-server/+bug/287215>
