@@ -1,7 +1,7 @@
 ---
 title: 合并挂载在 `/` 和 `/home` 的分区
 description: Combine the partitions mounted on / and /home
-category: System
+category: Tweaks
 tags: partition rsync
 redirect_from: /r/4
 ---

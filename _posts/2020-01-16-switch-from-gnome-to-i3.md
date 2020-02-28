@@ -1,8 +1,8 @@
 ---
 title: 从 GNOME 迁移到 i3
 description: Switching from GNOME to i3
-category: I3
-tags: i3 dotfiles
+category: Tweaks
+tags: i3 terminal dotfiles
 redirect_from: /r/3
 ---
 
