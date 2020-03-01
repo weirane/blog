@@ -13,7 +13,8 @@ redirect_from: /r/3
 
 ---
 
-2020-01-23 更新：增加了 [多显示器](#多显示器) 一节。
+- 2020-03-01 更新：增加了 [暖色屏幕（night shift）](#暖色屏幕night-shift) 一节。
+- 2020-01-23 更新：增加了 [多显示器](#多显示器) 一节。
 
 ## 安装
 `i3-wm` 和 `i3-gaps` 这两个包都提供 i3 window manager，而且它们互相冲突。由于我在虚拟机中体验的是 `i3-gaps` 所以这里就用了 `i3-gaps` 这个版本。
@@ -166,6 +167,17 @@ echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
 配置多个显示器可以使用 [`xrandr`] 工具。图形化的配置工具可以使用 `arandr` 这个包。
 
 [`xrandr`]: https://wiki.archlinux.org/index.php/Xrandr
+
+### 暖色屏幕（night shift）
+在晚上将屏幕颜色调成偏暖眼睛看得舒服些。在 GNOME 中内置了这个功能，在 i3 中可以安装 [`redshift`] 来达到相同的效果。安装后可通过 `systemd` 自动开启，使用
+
+    systemctl --user enable redshift
+
+或者如果想要状态栏的图标：
+
+    systemctl --user enable redshift-gtk
+
+[`redshift`]: https://wiki.archlinux.org/index.php/Redshift
 
 ### 锁屏
 想要达到以下的效果：
