@@ -7,7 +7,7 @@ permalink: /about/
 
 I am an undergraduate student at [USTC] majoring in computer science.
 
-Email: `base64 -d <<<'d2FuZ2tldmluOTIwQDE2My5jb20='`
+Email: `base64 -d <<<'d2VpcmFuZUBvdXRsb29rLmNvbQo='`
 <br />
 GitHub: [@weirane](https://github.com/weirane){:target="_blank"}
 <br />
