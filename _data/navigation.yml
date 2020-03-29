@@ -1,11 +1,11 @@
 main: # Top nav bar
-    - title: "Home"
-      url: /
-    - title: "About"
-      url: /about/
-    - title: "Categories"
-      url: /categories/
-    - title: "Projects"
-      url: /projects/
-    - title: 'GitHub <i class="fa fas fa-xs fa-external-link-alt"></i>'
-      url: 'https://github.com/weirane" target=_blank"'
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about/
+  - title: "Categories"
+    url: /categories/
+  - title: "Projects"
+    url: /projects/
+  - title: 'GitHub <i class="fa fas fa-xs fa-external-link-alt"></i>'
+    url: 'https://github.com/weirane" target=_blank"'

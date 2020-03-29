@@ -22,52 +22,52 @@ masthead_title: # overrides the website title displayed in the masthead, use " "
 # breadcrumbs: false # true, false (default)
 words_per_minute: 200
 comments:
-    provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
-    disqus:
-        shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
-    discourse:
-        server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-    facebook:
-        # https://developers.facebook.com/docs/plugins/comments
-        appid:
-        num_posts: # 5 (default)
-        colorscheme: # "light" (default), "dark"
-    utterances:
-        theme: # "github-light" (default), "github-dark"
-        issue_term: # "pathname" (default)
+  provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  disqus:
+    shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  discourse:
+    server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    # https://developers.facebook.com/docs/plugins/comments
+    appid:
+    num_posts: # 5 (default)
+    colorscheme: # "light" (default), "dark"
+  utterances:
+    theme: # "github-light" (default), "github-dark"
+    issue_term: # "pathname" (default)
 staticman:
-    allowedFields: # ['name', 'email', 'url', 'message']
-    branch: # "master"
-    commitMessage: # "New comment by {fields.name}"
-    filename: # comment-{@timestamp}
-    format: # "yml"
-    moderation: # true
-    path: # "/_data/comments/{options.slug}" (default)
-    requiredFields: # ['name', 'email', 'message']
-    transforms:
-        email: # "md5"
-    generatedFields:
-        date:
-            type: # "date"
-            options:
-                format: # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-    endpoint: # URL of your own deployment with trailing slash, will fallback to the public instance
+  allowedFields: # ['name', 'email', 'url', 'message']
+  branch: # "master"
+  commitMessage: # "New comment by {fields.name}"
+  filename: # comment-{@timestamp}
+  format: # "yml"
+  moderation: # true
+  path: # "/_data/comments/{options.slug}" (default)
+  requiredFields: # ['name', 'email', 'message']
+  transforms:
+    email: # "md5"
+  generatedFields:
+    date:
+      type: # "date"
+      options:
+        format: # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  endpoint: # URL of your own deployment with trailing slash, will fallback to the public instance
 reCaptcha:
-    siteKey:
-    secret:
+  siteKey:
+  secret:
 atom_feed:
-    path: # blank (default) uses feed.xml
+  path: # blank (default) uses feed.xml
 search: true
 search_full_content: # true, false (default)
 search_provider: # lunr (default), algolia, google
 algolia:
-    application_id: # YOUR_APPLICATION_ID
-    index_name: # YOUR_INDEX_NAME
-    search_only_api_key: # YOUR_SEARCH_ONLY_API_KEY
-    powered_by: # true (default), false
+  application_id: # YOUR_APPLICATION_ID
+  index_name: # YOUR_INDEX_NAME
+  search_only_api_key: # YOUR_SEARCH_ONLY_API_KEY
+  powered_by: # true (default), false
 google:
-    search_engine_id: # YOUR_SEARCH_ENGINE_ID
-    instant_search: # false (default), true
+  search_engine_id: # YOUR_SEARCH_ENGINE_ID
+  instant_search: # false (default), true
 # SEO Related
 google_site_verification:
 bing_site_verification:
@@ -85,78 +85,78 @@ og_image: # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-    type: # Person or Organization (defaults to Person)
-    name: # If the user or organization name differs from the site's name
-    links: # An array of links to social media profiles
+  type: # Person or Organization (defaults to Person)
+  name: # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
 
 # Analytics
 analytics:
-    provider: "google-gtag"
-    google:
-        tracking_id: "UA-150947791-1"
-        anonymize_ip: # true, false (default)
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-150947791-1"
+    anonymize_ip: # true, false (default)
 
 
 # Site Author
 author:
-    name: "weirane"
-    avatar: "/images/avatar.png"
-    bio: ""
-    location: "Anhui, China"
-    email:
-    links:
-        - label: "Email"
-          icon: "fas fa-fw fa-envelope-square"
-          # url: mailto:your.name@email.com
-        - label: "Website"
-          icon: "fas fa-fw fa-link"
-          # url: "https://your-website.com"
-        - label: "GitHub"
-          icon: "fab fa-fw fa-github"
-          url: "https://github.com/weirane"
+  name: "weirane"
+  avatar: "/images/avatar.png"
+  bio: ""
+  location: "Anhui, China"
+  email:
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      # url: mailto:your.name@email.com
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      # url: "https://your-website.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/weirane"
 
 # Site Footer
 footer:
-    links:
-        - label: "Telegram Channel"
-          icon: "fab fa-fw fa-telegram"
-          url: "https://t.me/wrc_notebook"
-        - label: "GitHub"
-          icon: "fab fa-fw fa-github"
-          url: "https://github.com/weirane"
-        - label: "Bitbucket"
-          icon: "fab fa-fw fa-bitbucket"
-          # url:
+  links:
+    - label: "Telegram Channel"
+      icon: "fab fa-fw fa-telegram"
+      url: "https://t.me/wrc_notebook"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/weirane"
+    - label: "Bitbucket"
+      icon: "fab fa-fw fa-bitbucket"
+      # url:
 
 
 # Reading Files
 include:
-    - .htaccess
-    - _pages
+  - .htaccess
+  - _pages
 exclude:
-    - vendor
-    - .asset-cache
-    - .bundle
-    - .jekyll-assets-cache
-    - .sass-cache
-    - assets/js/plugins
-    - assets/js/_main.js
-    - assets/js/vendor
-    - Capfile
-    - config
-    - Gemfile
-    - Gemfile.lock
-    - Gruntfile.js
-    - gulpfile.js
-    - LICENSE
-    - log
-    - node_modules
-    - tmp
-    - README.md
-    - /script
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - config
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - tmp
+  - README.md
+  - /script
 keep_files:
-    - .git
-    - .svn
+  - .git
+  - .svn
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
@@ -171,14 +171,14 @@ incremental: false
 
 # Markdown Processing
 kramdown:
-    input: GFM
-    hard_wrap: false
-    auto_ids: true
-    footnote_nr: 1
-    entity_output: as_char
-    toc_levels: 1..6
-    smart_quotes: lsquo,rsquo,ldquo,rdquo
-    enable_coderay: false
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
 
 # Sass/SCSS
@@ -197,24 +197,24 @@ sort_reverse: true
 
 # Plugins
 plugins:
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-gist
-    - jekyll-feed
-    - jekyll-include-cache
-    - jekyll-seo-tag
-    - jekyll-relative-links
-    - jekyll-redirect-from
-    - jekyll-archives
-    - jemoji
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-relative-links
+  - jekyll-redirect-from
+  - jekyll-archives
+  - jemoji
 
 # mimic GitHub Pages with --safe
 whitelist:
-    - jekyll-paginate
-    - jekyll-sitemap
-    - jekyll-gist
-    - jekyll-feed
-    - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
 
 
 # Archives
@@ -228,55 +228,55 @@ whitelist:
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
-    type: jekyl-archives
-    path: /categories/
+  type: jekyl-archives
+  path: /categories/
 tag_archive:
-    type: jekyll-archives
-    path: /tags/
+  type: jekyll-archives
+  path: /tags/
 jekyll-archives:
-    enabled:
-        - categories
-        - tags
-    layouts:
-        category: archive-taxonomy
-        tag: archive-taxonomy
-    permalinks:
-        category: /categories/:name/
-        tag: /tags/:name/
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
 # - https://jch.penibelst.de/
 compress_html:
-    clippings: all
-    ignore:
-        envs: development
+  clippings: all
+  ignore:
+    envs: development
 
 
 # Defaults
 defaults:
-    # _posts
-    - scope:
-        path: ""
-        type: posts
-      values:
-          layout: single
-          toc: true
-          toc_sticky: true
-          author_profile: false
-          read_time: true
-          comments: # true
-          share: false
-          related: true
-    - scope:
-        path: ""
-        type: drafts
-      values:
-          layout: single
-          toc: true
-          toc_sticky: true
-          author_profile: false
-          read_time: true
-          comments: # true
-          share: false
-          related: true
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      toc: true
+      toc_sticky: true
+      author_profile: false
+      read_time: true
+      comments: # true
+      share: false
+      related: true
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: single
+      toc: true
+      toc_sticky: true
+      author_profile: false
+      read_time: true
+      comments: # true
+      share: false
+      related: true
