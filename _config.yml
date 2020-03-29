@@ -123,8 +123,8 @@ footer:
       url: "https://t.me/wrc_notebook"
     - label: "Mastodon"
       icon: "fab fa-fw fa-mastodon"
-      # This little trick adds `rel="me"` to the `a` tag
-      url: 'https://m.cmx.im/@weirane" rel="me'
+      url: 'https://m.cmx.im/@weirane'
+      rel: 'me nofollow noopener noreferrer'
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/weirane"
