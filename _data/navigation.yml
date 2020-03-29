@@ -8,4 +8,4 @@ main: # Top nav bar
   - title: "Projects"
     url: /projects/
   - title: 'GitHub <i class="fa fas fa-xs fa-external-link-alt"></i>'
-    url: 'https://github.com/weirane" target=_blank"'
+    url: 'https://github.com/weirane" target="_blank'
