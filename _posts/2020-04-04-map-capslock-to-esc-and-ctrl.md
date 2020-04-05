@@ -87,9 +87,12 @@ index e9e29b6..d3641f2 100644
 `/etc/systemd/system/multi-user.target.wants/udevmon.service` 以取消自动启动
 `udevmon`，比如用 Live USB 或者 SSH 到主机。（不要问我是怎么知道的）
 
-如果需要触发 Caps Lock 键（比如 Caps Lock 不知为什么被打开了），可以使用命令
-`xdotool key Caps_Lock`，按住 `Shift` 输入小写字母。
+此时如果需要触发 Caps Lock 键（比如 Caps Lock 不知为什么被打开了），只能先将
+`udevmon` 停止再按 Caps Lock。为了方便我给 `caps2esc` 加了一个 signal handler，
+当收到 `SIGUSR1` 的时候触发 Caps Lock，这样需要的时候可以直接 `sudo killall
+-USR1 caps2esc`。[源代码][nocaps-src] 放在了 GitHub 上，还有一个对应的AUR 包
+`intercept-caps2esc-nocaps-git`。
 
 [int-tool]: https://gitlab.com/interception/linux/tools
 [caps2esc]: https://gitlab.com/interception/linux/plugins/caps2esc
-[no-capslock]: https://github.com/weirane/caps2esc/commit/6c61312170dd0127e899b77b6e6f20714bbd5fe1
+[nocaps-src]: https://github.com/weirane/caps2esc
