@@ -13,6 +13,7 @@ redirect_from: /r/3
 
 ---
 
+- 2020-04-11 更新：增加了 [QQ](#qq) 一节。
 - 2020-03-01 更新：增加了 [暖色屏幕（night shift）](#暖色屏幕night-shift) 一节。
 - 2020-01-23 更新：增加了 [多显示器](#多显示器) 一节。
 
@@ -97,6 +98,11 @@ image/png=sxiv.desktop
 [sxiv]: https://github.com/muennich/sxiv
 [zathura]: https://pwmt.org/projects/zathura/
 [dotfiles]: https://github.com/weirane/dotfiles/blob/master/dotconfig/
+
+### QQ
+在 GNOME 使用 QQ 我是用的 `archlinuxcn/deepin.com.qq.office` 这个包。但是在 i3 中启动时会报 `X Error of failed request`，解决方法是安装 `xsettingsd`，将其挂在后台再启动 QQ。
+
+`xsettingsd` 的配置文件可以通过先运行 `/usr/lib/gsd-xsettings` 再使用 `xsettingsd` 自带的 `dump_xsettings` 命令获取，将命令的输出写入 `~/.config/xsettingsd/xsettingsd.conf`，然后将以 `Gtk` 或 `Gdk` 开头的行全部删除。
 
 ## 硬件相关
 ### 连接 WiFi、蓝牙
