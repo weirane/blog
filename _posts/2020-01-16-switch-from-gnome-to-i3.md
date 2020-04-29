@@ -57,16 +57,14 @@ redirect_from: /r/3
 使用 termite 的透明背景功能需要安装 `xcompmgr` 并让它自动启动。
 
 ### 设置 xdg-open 使用的程序
-使用以下命令设置
-
-    xdg-mime default <program>.desktop <MIME type>
-
-或者直接修改 `~/.local/share/applications/defaults.list`（没有就创建该文件），示例如下：
+参考 [Arch Wiki][mime-wiki]，修改 `~/.config/mimeapps.list`（没有就创建该文件），如下：
 ```ini
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
 image/png=sxiv.desktop
 ```
+
+[mime-wiki]: https://wiki.archlinux.org/index.php/XDG_MIME_Applications
 
 ### 截图
 使用 `scrot`。写一个脚本以支持不同的情况并使用 `zenity` 选择保存位置，如下面 [这个 gist][scrot-gist]：
