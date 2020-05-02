@@ -120,7 +120,7 @@ modifier key 按下后直接弹起的动作进行映射。可以先使用 [之�
 
     xcape -e 'Control_L=Escape'
 
-启动图形界面时和另外连接键盘时需要运行此命令。
+启动图形界面时运行此命令。
 
 [XCAPE]: https://github.com/alols/xcape
 
