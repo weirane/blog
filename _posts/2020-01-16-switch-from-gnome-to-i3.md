@@ -81,11 +81,7 @@ image/png=sxiv.desktop
 [mime-wiki]: https://wiki.archlinux.org/index.php/XDG_MIME_Applications
 
 ### 截图
-使用 `scrot`。写一个脚本以支持不同的情况并使用 `zenity` 选择保存位置，如下面 [这个 gist][scrot-gist]：
-
-<script src="https://gist.github.com/weirane/d8209c45e8c8e69dc33cd460e5dec7c0.js"></script>
-
-并在 `~/.config/i3/config` 中添加：
+使用 `scrot`。写一个脚本以支持不同的使用方式并使用 `zenity` 选择保存位置，如 [这个脚本][scrot-script]。并在 `~/.config/i3/config` 中添加：
 
     bindsym Print exec --no-startup-id /path/to/screenshot.sh --whole
     bindsym $mod+Shift+Print exec --no-startup-id /path/to/screenshot.sh --window
@@ -93,16 +89,12 @@ image/png=sxiv.desktop
 
 这样的效果是使用 `PrtSc` 截取全屏，`Shift`+`PrtSc` 截取一个区域，`Super`+`Shift`+`PrtSc` 截取当前的窗口。
 
-[scrot-gist]: https://gist.github.com/weirane/d8209c45e8c8e69dc33cd460e5dec7c0
+[scrot-script]: https://github.com/weirane/dotfiles/blob/33edd42a3c/dotconfig/i3/scripts/screenshot.sh
 
 ### 挂载
-在 i3 中没有了 GNOME 中插入 U 盘自动挂载的功能，不过可以利用 dmenu 写一个挂载 drive 的脚本，如下面的 [gist][mount-gist]：
+在 i3 中没有自带 GNOME 中插入 U 盘自动挂载的功能，不过可以利用 dmenu 写一个选择并挂载 drive 的脚本 [(link)][mount-script]，再给这个脚本绑定一个快捷键即可。
 
-<script src="https://gist.github.com/weirane/d3eea2b74d31b4da5ae9b5f7b41c33ab.js"></script>
-
-再给这个脚本绑定一个快捷键即可。
-
-[mount-gist]: https://gist.github.com/weirane/d3eea2b74d31b4da5ae9b5f7b41c33ab
+[mount-script]: https://github.com/weirane/dotfiles/blob/33edd42a3c/dotconfig/i3/scripts/mount.sh
 
 ### 图片和 PDF 阅读器
 由于从 GNOME 3.32 开始一些 GNOME 应用的标题栏变得很厚，evince 和 gthumb 在 i3 这种平铺窗口管理器下有一个很高的标题栏，所以打算换一个阅读器。选择的图片阅读器是 [sxiv]，PDF 阅读器是 [zathura]。对应的配置文件在我的 [dotfiles] 仓库里。
