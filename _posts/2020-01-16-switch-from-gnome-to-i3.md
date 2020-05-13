@@ -13,6 +13,7 @@ redirect_from: /r/3
 
 ---
 
+- 2020-05-13 更新：增加了 [GNOME Keyring 自动解锁](#gnome-keyring-自动解锁) 一节。
 - 2020-04-11 更新：增加了 [QQ](#qq) 一节。
 - 2020-03-01 更新：增加了 [暖色屏幕（night shift）](#暖色屏幕night-shift) 一节。
 - 2020-01-23 更新：增加了 [多显示器](#多显示器) 一节。
@@ -40,6 +41,19 @@ redirect_from: /r/3
 原因是 `/tmp/fcitx-socket-:1` 这个 socket 的所有者是 root，`fcitx.vim` 对它没有写权限。启动命令最好放在 i3 的配置文件中，即在 `~/.config/i3/config` 中加入：
 
     exec --no-startup-id fcitx
+
+### GNOME Keyring 自动解锁
+如果不使用 gdm，那么需要额外的配置来使 GNOME Keyring 自动解锁。根据 [Arch Wiki][keyring-wiki]，自动解锁需要使用其中的「PAM method」。修改文件 `/etc/pam.d/login`，将
+
+    auth optional pam_gnome_keyring.so
+
+加入 `auth` section 的末尾，再将
+
+    session optional pam_gnome_keyring.so auto_start
+
+加入 `session` section 的末尾。
+
+[keyring-wiki]: https://wiki.archlinux.org/index.php/GNOME/Keyring#Console_login
 
 ### 设置墙纸
 可以使用 `feh` 来设置墙纸，使用命令
