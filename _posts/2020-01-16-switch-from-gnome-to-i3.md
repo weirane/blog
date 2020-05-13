@@ -43,7 +43,7 @@ redirect_from: /r/3
     exec --no-startup-id fcitx
 
 ### GNOME Keyring 自动解锁
-如果不使用 gdm，那么需要额外的配置来使 GNOME Keyring 自动解锁。根据 [Arch Wiki][keyring-wiki]，自动解锁需要使用其中的「PAM method」。修改文件 `/etc/pam.d/login`，将
+如果使用 `startx` 启动 i3，那么需要额外的配置来使 GNOME Keyring 自动解锁。根据 [Arch Wiki][keyring-wiki]，自动解锁需要使用其中的「PAM method」。修改文件 `/etc/pam.d/login`，将
 
     auth optional pam_gnome_keyring.so
 
