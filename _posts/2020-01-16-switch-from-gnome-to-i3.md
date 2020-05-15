@@ -51,7 +51,11 @@ redirect_from: /r/3
 
     session optional pam_gnome_keyring.so auto_start
 
-加入 `session` section 的末尾。
+加入 `session` section 的末尾。然后将以下内容加入 `~/.xinitrc`：
+
+    eval "$(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
+    export SSH_AUTH_SOCK
+
 
 [keyring-wiki]: https://wiki.archlinux.org/index.php/GNOME/Keyring#Console_login
 
