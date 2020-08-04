@@ -13,4 +13,6 @@ group :jekyll_plugins do
   gem "jekyll-relative-links"
   gem "jekyll-redirect-from"
   gem 'jekyll-archives'
+  gem "jekyll-last-modified"
+  gem "jekyll-environment-variables"
 end

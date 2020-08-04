@@ -4,6 +4,7 @@
 .bundle
 .jekyll-cache
 .jekyll-metadata
+.git-metadata
 .sass-cache
 _asset_bundler_cache
 _site
