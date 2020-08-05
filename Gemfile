@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "jekyll", '~> 4.1.0'
-gem "minimal-mistakes-jekyll", '~> 4.19.0'
+gem "minimal-mistakes-jekyll", '~> 4.20.1'
 
 group :jekyll_plugins do
   gem "jekyll-paginate"
