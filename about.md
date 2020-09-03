@@ -3,6 +3,7 @@ layout: single
 title: About
 author_profile: true
 permalink: /about/
+comments: true
 ---
 
 I am an undergraduate student at [USTC] majoring in computer science.
