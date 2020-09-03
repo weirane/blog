@@ -22,7 +22,7 @@ masthead_title: # overrides the website title displayed in the masthead, use " "
 # breadcrumbs: false # true, false (default)
 words_per_minute: 200
 comments:
-  provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider: "custom" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -270,7 +270,7 @@ defaults:
       toc_sticky: true
       author_profile: false
       read_time: true
-      comments: # true
+      comments: true
       share: false
       related: true
   - scope:
