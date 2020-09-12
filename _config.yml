@@ -13,7 +13,7 @@ title_separator: "|"
 subtitle: # site tagline that appears below site title in masthead
 name: "Wang Ruochen"
 description: "weirane's blog"
-url: "https://weirane.github.io"
+url: "https://blog.ruo-chen.wang"
 baseurl: ""
 repository: "weirane/blog"
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
