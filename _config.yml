@@ -282,6 +282,7 @@ defaults:
       type: home
     values:
       layout: single
+      no_pagination: true
       author_profile: true
   - scope:
       path: ""
