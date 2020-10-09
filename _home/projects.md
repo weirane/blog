@@ -1,8 +1,5 @@
 ---
-layout: single
 title: Projects
-author_profile: true
-permalink: /projects/
 ---
 
 Here are some of my projects:

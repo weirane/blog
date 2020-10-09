@@ -199,6 +199,10 @@ paginate_path: /page:num/
 timezone: Asia/Shanghai # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 sort_reverse: true
 
+collections:
+  home:
+    output: true
+    permalink: "/:path/"
 
 # Plugins
 plugins:
@@ -273,6 +277,12 @@ defaults:
       comments: true
       share: false
       related: true
+  - scope:
+      path: ""
+      type: home
+    values:
+      layout: single
+      author_profile: true
   - scope:
       path: ""
       type: drafts

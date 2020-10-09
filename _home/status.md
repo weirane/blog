@@ -1,7 +1,6 @@
 ---
-layout: single
 title: Status
-permalink: /status/
+author_profile: false
 noindex: true
 ---
 
