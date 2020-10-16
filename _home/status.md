@@ -1,6 +1,8 @@
 ---
 title: Status
 author_profile: false
+sidebar:
+  nav: false
 noindex: true
 ---
 

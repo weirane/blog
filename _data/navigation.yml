@@ -7,5 +7,15 @@ main: # Top nav bar
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "Projects"
-    url: /projects/
+
+home:
+  - title: "Pages"
+    children:
+      - title: '<i class="fas fa-fw fa-home"></i> Home'
+        url: /
+      - title: '<i class="fas fa-fw fa-user-circle"></i> About'
+        url: /about/
+      - title: '<i class="fas fa-fw fa-pencil-alt"></i> Projects'
+        url: /projects/
+      - title: '<i class="fas fa-fw fa-link"></i> Ref links'
+        url: /reflinks/

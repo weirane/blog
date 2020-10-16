@@ -15,6 +15,8 @@ Other misc:
 [bienum]: https://github.com/weirane/bienum
 [cp-wasm]: https://weirane.github.io/closest-pair-wasm
 [bank-mg]: https://github.com/weirane/bank-management
+[actix-web]: https://github.com/actix/actix-web
+[sqlx]: https://github.com/launchbadge/sqlx
 [gadgets]: https://github.com/weirane/gadgets
 [dotfiles]: https://github.com/weirane/dotfiles
 [ugg]: https://github.com/weirane/ustc-get-grade

@@ -7,7 +7,7 @@ theme: "minimal-mistakes-jekyll"
 minimal_mistakes_skin: "dirt"
 
 # Site Settings
-locale: "en"  # "zh-CN"
+locale: "zh-CN"  # "zh-CN"
 title: "weirane's blog"
 title_separator: "|"
 subtitle: # site tagline that appears below site title in masthead
@@ -284,6 +284,8 @@ defaults:
       layout: single
       no_pagination: true
       author_profile: true
+      sidebar:
+        nav: home
   - scope:
       path: ""
       type: drafts
