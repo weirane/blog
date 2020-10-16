@@ -1,5 +1,5 @@
 ---
-title: Ref links
+title: Referal links
 ---
 
 <dl>
