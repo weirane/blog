@@ -62,8 +62,12 @@ html {
         font-size: 18px;
     }
     @include breakpoint($x-large) {
-        font-size: 20px;
+        font-size: 18px;
     }
+}
+
+.sidebar p, .sidebar li {
+    font-size: 0.8em;
 }
 
 body.full-wide article.page {
