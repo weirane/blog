@@ -10,6 +10,7 @@ Caps Lock 可能是键盘上最没有用的一个键了，但是它又占据了 
 会把它映射成 Escape 或者 Ctrl。但是作为一个 Vim 用户，Escape 和 Ctrl 都是很常用
 的键。如何让 Caps Lock 在单击的时候是 Escape，和其它键配合的时候是 Ctrl？
 
+- 2020-11-15 更新：扩充 [Xmodmap](#xmodmap) 一节
 - 2020-04-08 更新：增加了 [XCAPE](#xcape) 和 [总结](#总结)
 
 ## 之前的配置
@@ -19,16 +20,27 @@ Caps Lock 可能是键盘上最没有用的一个键了，但是它又占据了 
 ### Xmodmap
 
 [以前][pre-capslock] 有写过使用 xmodmap 将 Caps Lock 变为 Ctrl 的方法，但是这个
-方法不能让单击 Caps Lock 时产生 Escape 的效果。
+方法不能让单击 Caps Lock 时产生 Escape 的效果。做法是将以下内容写入文件，比如存
+放在 `~/.config/X11/Xmodmap`，然后在启动的时候运行 `xmodmap ~/.config/X11/Xmodmap`。
+这种方法需要在启动图形界面时和连接新键盘时重新执行以上的命令。
+
+```
+clear lock
+clear control
+add control = Caps_Lock Control_L Control_R
+keycode 66 = Control_L Control_L Control_L Control_L
+```
 
 [pre-capslock]: /2020/01/switch-from-gnome-to-i3.html#remap-capslock
 
 ### setxkbmap 命令
 
 使用下面的命令可将 Caps Lock 映射成 Ctrl，和 Xmodmap 一样需要在启动图形界面时和
-连接键盘时重新运行命令。
+连接新键盘时重新运行命令。
 
-    setxkbmap -option ctrl:nocaps
+```sh
+setxkbmap -option ctrl:nocaps
+```
 
 ### hwdb
 
