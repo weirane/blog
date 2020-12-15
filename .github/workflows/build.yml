@@ -26,10 +26,6 @@ jobs:
     - name: Install dependencies
       run: |
         bundle install --path=vendor/bundle
-    - name: Prepare build
-      run: |
-        git clone -q --depth=1 --branch=gh-pages --single-branch --no-checkout \
-          https://${{ secrets.GH_TOKEN }}@github.com/weirane/weirane.github.io.git _site
     - name: Build site
       run: bundle exec jekyll build --profile --trace
       env:
