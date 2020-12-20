@@ -215,7 +215,6 @@ plugins:
   - jekyll-relative-links
   - jekyll-redirect-from
   - jekyll-archives
-  - jemoji
 
 # mimic GitHub Pages with --safe
 whitelist:
