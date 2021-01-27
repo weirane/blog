@@ -10,8 +10,11 @@ Caps Lock 可能是键盘上最没有用的一个键了，但是它又占据了 
 会把它映射成 Escape 或者 Ctrl。但是作为一个 Vim 用户，Escape 和 Ctrl 都是很常用
 的键。如何让 Caps Lock 在单击的时候是 Escape，和其它键配合的时候是 Ctrl？
 
+**TL; DR:** 见 [总结](#总结)
+
 - 2020-11-15 更新：扩充 [Xmodmap](#xmodmap) 一节
 - 2020-04-08 更新：增加了 [XCAPE](#xcape) 和 [总结](#总结)
+- 2021-01-27 更新：增加了 TL; DR
 
 ## 之前的配置
 
@@ -138,6 +141,6 @@ modifier key 按下后直接弹起的动作进行映射。可以先使用 [之�
 
 ## 总结
 
-- 只想在 X 中映射 Caps Lock 到 Ctrl 和 Escape：使用 Xmodmap 或者 setxkbmap 加上 XCAPE；
-- 在 tty 中也映射：使用 interception tools；
-- 在 X 中映射到 Ctrl 和 Escape，tty 中只映射到 Ctrl：使用 hwdb 和 XCAPE。
+- 只想在 X 中映射 Caps Lock 到 Ctrl 和 Escape：使用 Xmodmap 或者 setxkbmap 加上 [XCAPE]；
+- 在 tty 中也映射：使用 [interception tools][int-tool]；
+- 在 X 中映射到 Ctrl 和 Escape，tty 中只映射到 Ctrl：使用 hwdb 和 [XCAPE]。
