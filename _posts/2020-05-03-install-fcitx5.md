@@ -10,15 +10,18 @@ redirect_from: /r/6
 只有在 KDE 中有图形化的配置工具就一直没有尝试。今天有人说配置工具 `kcm-fcitx5`
 在非 KDE 中也可以安装了，所以来试试。
 
+- 2021-01-29 更新：`kcm-fcitx5` 改名为 `fcitx5-configtool`（其实早就改了，只是博
+    客里没更新）
+
 ## 安装
 
 先卸载 fcitx4：
 
-    pacman -Qsq fcitx | sudo xargs pacman -Rsn
+    pacman -Qsq fcitx | sudo pacman -Rsn -
 
 安装 fcitx5：
 
-    sudo pacman -S fcitx5 fcitx5-chinese-addons kcm-fcitx5 fcitx5-qt fcitx5-gtk
+    sudo pacman -S fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-qt fcitx5-gtk
 
 Fcitx5 自带的皮肤不是很好看，我还安装了 [material-color 皮肤][material]：
 
