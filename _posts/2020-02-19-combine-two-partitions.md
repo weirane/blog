@@ -33,22 +33,22 @@ sudo rsync -aAXvu --delete \
     --exclude=...
 ```
 
-这其实是我定期备份使用的一个命令。
+此命令也可以用于定期备份。
 
-[rsync1]: https://linux.die.net/man/1/rsync "rsync(1)"
+[rsync1]: https://man.archlinux.org/man/extra/rsync/rsync.1 "rsync(1)"
 
 ### 迁移
 由于需要操作 `/home`，在登录一般用户的时候会无法将其 `umount`，所以得用 root 账号登录。为此我把我的登录管理器 `lightdm` disable 掉
-
-    sudo systemctl disable lightdm
-
+```bash
+sudo systemctl disable lightdm
+```
 重新启动后便进入了 tty1，输入 root 的用户名和密码，然后将挂载在 `/home` 的分区挂载到另一个目录上，再使用 `rsync` 同步：
-
-    umount /home
-    mkdir /mnt/home
-    mount /dev/nvme0n1p8 /mnt/home
-    rsync -aAXuv /mnt/home/wang /home
-
+```bash
+umount /home
+mkdir /mnt/home
+mount /dev/nvme0n1p8 /mnt/home
+rsync -aAXuv /mnt/home/wang /home
+```
 
 ### 合并分区
 `rsync` 同步完成之后就需要修改分区了。此时可以直接使用 `fdisk` 或者其它的命令行工具修改，但是我还是想稳一点，用 Gparted 来修改，顺便测试一下登录一般用户会不会出现问题。使用 `Ctrl`+`Alt`+`F2` 切到 tty2，登录一般用户并运行 `startx` 启动图形界面（我用的是 i3，不同的配置及不同的桌面环境的启动方式可能会有不同），此时可以看看家目录中的文件是否正常，然后利用 Gparted 删除 `/home` 对应的分区，再扩展 `/` 的分区。
