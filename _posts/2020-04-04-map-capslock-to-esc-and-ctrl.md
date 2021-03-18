@@ -133,7 +133,9 @@ index e9e29b6..d3641f2 100644
 modifier key 按下后直接弹起的动作进行映射。可以先使用 [之前](#之前的配置) 说的方
 法映射 Caps Lock 为 Ctrl，再使用 XCAPE 将按下 Ctrl 再直接弹起映射为 Escape：
 
-    xcape -e 'Control_L=Escape'
+```sh
+xcape -e 'Control_L=Escape'
+```
 
 启动图形界面时运行此命令。
 

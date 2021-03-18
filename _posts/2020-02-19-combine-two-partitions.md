@@ -8,7 +8,7 @@ redirect_from: /r/4
 
 最近需要装一个很大的虚拟机，在导入 VirtualBox 的时候出现了「`NS_ERROR_INVALID_ARG (0x80070057)`」这个错误，上网查发现是因为硬盘空间不足。我的硬盘有 67G 的空闲空间，但是因为把 `/home` 单独分了一个分区，两个分区每个都有 30G 左右的剩余空间，无法充分利用。我的 `/` 和 `/home` 对应的分区是相连的，合并较为方便，便打算将这两个分区合并起来。以下是 `df`[^1] 的结果：
 
-```terminal
+```console
 $ df
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/nvme0n1p6   81G   47G   30G  61% /
@@ -61,7 +61,7 @@ rsync -aAXuv /mnt/home/wang /home
 ## 结果
 成功 🎉
 
-```terminal
+```console
 $ df
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/nvme0n1p6  133G   60G   68G  47% /
