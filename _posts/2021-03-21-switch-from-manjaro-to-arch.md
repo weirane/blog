@@ -151,7 +151,8 @@ swap  PARTUUID=xxx  /dev/urandom  swap,cipher=aes-xts-plain64,size=512
 ### Key in initramfs
 
 可以在 initramfs 中放一个 LUKS key，这样在开机的时候就不需要输两次 LUKS 密码了。
-我一般将 key 放在 `/etc` 中。注意要调整 key file 的权限。
+我一般将 key 放在 `/etc` 中。注意要调整 key file 和装有 key file 的 initramfs 的
+权限。
 
 ```sh
 sudo dd bs=512 count=4 if=/dev/urandom of=/path/to/key
