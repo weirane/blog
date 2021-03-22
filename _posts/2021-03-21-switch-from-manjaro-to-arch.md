@@ -1,8 +1,8 @@
 ---
 title: 从 Manjaro 迁移到 Arch Linux
-description: Switch from Manjaro to Arch Linux
+description: Switch from Manjaro to Arch Linux with LUKS and Btrfs
 category: Tweaks
-tags: archlinux luks swap xbacklight
+tags: archlinux btrfs luks swap xbacklight
 redirect_from: /r/9
 ---
 
@@ -25,7 +25,7 @@ Btrfs 快照管理工具 [dosnap][]。奇怪的是，在出错的时候（如 `p
 ## 备份
 
 可以使用 Btrfs 的 send/receive 功能进行备份。注意备份的移动硬盘也需要是 Btrfs 文
-件系统。先对各个子卷做快照，然后对每个快照进行 `btrfs send`：
+件系统。先对各个子卷做只读快照，然后对每个快照进行 `btrfs send`：
 
 ```sh
 sudo btrfs send /mnt/_snapshots/${SNAPSHOT_NAME?} | sudo btrfs receive ${EXTERNAL_DRIVE?}
@@ -117,7 +117,7 @@ rsync -a ${EXTERNAL_DRIVE?}/home-snap/wang/.* ~
 
 ### 安装软件包
 
-安装 `weirane-dotfiles-deps`
+安装我自己常用的软件
 ```sh
 cd ~/.dotfiles/weirane-dotfiles-deps
 makepkg -si
@@ -166,7 +166,7 @@ chmod -R g-rwx,o-rwx /boot
 FILES=(/path/to/key)
 ```
 
-改 `/etc/default/grub` 中的内核命令行：
+改 `/etc/default/grub` 中的内核命令行，加入 `cryptkey=rootfs:/path/to/key`：
 ```sh
 GRUB_CMDLINE_LINUX="cryptdevice=PARTUUID=xxx:archlinux cryptkey=rootfs:/path/to/key"
 ```
@@ -175,8 +175,8 @@ GRUB_CMDLINE_LINUX="cryptdevice=PARTUUID=xxx:archlinux cryptkey=rootfs:/path/to/
 
 ### xbacklight
 
-进入图形界面后发现 polybar 中的亮度模块没有显示，`xbacklight` 命令没有输出。应该
-安装 `xf86-video-intel` 并将下面的配置写入
+进入图形界面后发现 polybar 中的亮度模块没有显示，`xbacklight` 命令没有输出。参考
+[ArchWiki][aw-backlight] 之后发现应该安装 `xf86-video-intel` 并将下面的配置写入
 `/etc/X11/xorg.conf.d/20-xbacklight.conf`：
 ```
 Section "Device"
@@ -185,6 +185,8 @@ Section "Device"
     Option      "Backlight"  "intel_backlight"
 EndSection
 ```
+
+[aw-backlight]: https://wiki.archlinux.org/index.php/Backlight#xbacklight
 
 ## 总结
 
