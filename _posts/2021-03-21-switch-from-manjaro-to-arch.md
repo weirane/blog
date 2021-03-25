@@ -10,6 +10,8 @@ redirect_from: /r/9
 `/boot`）。由于我已经在虚拟机里面实验过整个过程，所以今天的安装过程非常顺利，一
 共只用了一两个小时。
 
+- 2021-03-25 更新：增加了 [redshift 无法使用 geoclue](#redshift-无法使用-geoclue) 一节
+
 ## 背景
 
 前几天用 `btrfs-convert` 把我的 Manjaro 的文件系统换成了 Btrfs，然后继续开发我的
@@ -187,6 +189,41 @@ EndSection
 ```
 
 [aw-backlight]: https://wiki.archlinux.org/index.php/Backlight#xbacklight
+
+### redshift 无法使用 geoclue
+
+运行 redshift 有如下报错
+```
+Trying location provider `geoclue2'...
+Using provider `geoclue2'.
+Using method `randr'.
+Waiting for initial location to become available...
+Unable to start GeoClue client: GDBus.Error:org.freedesktop.DBus.Error.AccessDenied: 'redshift' disallowed, no agent for UID 1000.
+Access to the current location was denied by GeoClue!
+Make sure that location services are enabled and that Redshift is permitted
+to use location services. See https://github.com/jonls/redshift#faq for more
+information.
+Unable to get location from provider.
+```
+
+查阅 [ArchWiki][aw-redshift]，将以下内容写入
+`~/.config/systemd/user/geoclue-agent.service`
+
+```ini
+[Unit]
+Description=redshift needs to get a (geo)clue
+
+[Service]
+ExecStart=/usr/lib/geoclue-2.0/demos/agent
+
+[Install]
+WantedBy=default.target
+```
+
+运行命令 `systemctl --user enable --now geoclue-agent.service` 之后就可以使用
+redshift 了。
+
+[aw-redshift]: https://wiki.archlinux.org/index.php/Redshift#Redshift_GDBus.Error:org.freedesktop.DBus.Error.AccessDenied_on_start
 
 ## 总结
 
