@@ -2,7 +2,7 @@
 title: 从 Manjaro 迁移到 Arch Linux
 description: Switch from Manjaro to Arch Linux with LUKS and Btrfs
 category: Tweaks
-tags: archlinux btrfs luks swap xbacklight
+tags: archlinux btrfs luks redshift swap xbacklight
 redirect_from: /r/9
 ---
 
@@ -173,6 +173,12 @@ FILES=(/path/to/key)
 GRUB_CMDLINE_LINUX="cryptdevice=PARTUUID=xxx:archlinux cryptkey=rootfs:/path/to/key"
 ```
 
+最后重新生成 initramfs 和 GRUB config
+```sh
+sudo mkinitcpio -P
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 ## 解决问题
 
 ### xbacklight
@@ -192,7 +198,7 @@ EndSection
 
 ### redshift 无法使用 geoclue
 
-运行 redshift 有如下报错
+运行 `redshift` 有如下报错
 ```
 Trying location provider `geoclue2'...
 Using provider `geoclue2'.
