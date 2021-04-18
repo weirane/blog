@@ -11,6 +11,7 @@ redirect_from: /r/9
 共只用了一两个小时。
 
 - 2021-03-25 更新：增加了 [redshift 无法使用 geoclue](#redshift-无法使用-geoclue) 一节
+- 2021-04-18 更新：增加了 [将 `~/.cache` 单独分为一个子卷](#将-cache-单独分为一个子卷) 一节
 
 ## 背景
 
@@ -230,6 +231,33 @@ WantedBy=default.target
 redshift 了。
 
 [aw-redshift]: https://wiki.archlinux.org/index.php/Redshift#Redshift_GDBus.Error:org.freedesktop.DBus.Error.AccessDenied_on_start
+
+### 将 `~/.cache` 单独分为一个子卷
+
+我现在对我的家目录每两小时进行[快照][dosnap]，用了一段时间后[发现][btrfs-du]每个
+快照都有至少 30 MB 的 exclusive data。[比较][btrfs-diff]后发现主要是 `~/.cache`
+中的数据，所以想把它单独分为一个子卷。
+
+登出当前用户，并在 tty 登陆 root 用户。把 `~/.cache` 这个目录空出来，并创建子卷
+```sh
+cd /home/wang
+mv .cache .cache2
+btrfs subv create /home/wang/.cache
+```
+
+然后把数据复制回来，再恢复权限。
+```sh
+cp -a --reflink .cache2/* .cache
+chown wang:wang .cache
+rm -r .cache2
+```
+
+分开 `~/.cache` 之后每两小时快照的 exclusive data 基本上在 20 MB 之下，效果还可
+以。
+
+[dosnap]: https://github.com/weirane/dosnap
+[btrfs-du]: https://github.com/nachoparker/btrfs-du
+[btrfs-diff]: https://serverfault.com/a/580264
 
 ## 总结
 
