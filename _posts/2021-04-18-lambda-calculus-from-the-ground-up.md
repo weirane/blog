@@ -444,7 +444,7 @@ Y = lambda f: (lambda x: f(lambda z: x(x)(z)))(lambda x: f(lambda z: x(x)(z)))
 >>> FACT = Y(
 ...     lambda f: lambda n: L_ISZERO(n) \
 ...                         (lambda: ONE) \
-...                         (lambda: MUL(n)(FACT(PRED(n))))
+...                         (lambda: MUL(n)(f(PRED(n))))
 ... )
 >>> a = FACT(FOUR)
 >>> toint(a)
@@ -454,6 +454,25 @@ Y = lambda f: (lambda x: f(lambda z: x(x)(z)))(lambda x: f(lambda z: x(x)(z)))
 本文中的代码已整理到 [Gist][gist-code] 上。
 
 [ycomb]: https://en.wikipedia.org/wiki/Fixed-point_combinator#Fixed-point_combinators_in_lambda_calculus
+
+## 补充
+
+[惰性求值](#惰性求值23440) 一节中也可以使用另一种方法。参考 [Y 组合子](#y-组合子31320)
+一节，用 `lambda x: f(x)` 代替 `f`，这样不需要新定义 lazy 版本的函数。因为万物皆
+是函数，所以不需要担心 `f(x)` 因为 `f` 不是函数而出错。
+
+```python
+FACT = lambda n: ISZERO(n) \
+                 (lambda x: ONE(x)) \
+                 (lambda x: MUL(n)(FACT(PRED(n)))(x))
+```
+```python
+FACT = Y(
+    lambda f: lambda n: ISZERO(n) \
+                        (lambda x: ONE(x)) \
+                        (lambda x: MUL(n)(f(PRED(n)))(x))
+)
+```
 
 ## 总结
 
