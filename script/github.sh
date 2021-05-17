@@ -2,6 +2,7 @@
 set -e
 
 cd _site
+git config --global init.defaultBranch master
 git init
 git config user.name "GitHub Actions"
 git config user.email "noreply@github.com"
