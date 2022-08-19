@@ -3,7 +3,8 @@ title: About
 comments: true
 ---
 
-I am an undergraduate student at [USTC] majoring in computer science.
+I am a CS master's student at UCSD. Before that I went to [USTC] and received a
+bacheler's degree in computer science.
 
 <ul class="fa-ul">
 <li>
@@ -20,4 +21,4 @@ I am an undergraduate student at [USTC] majoring in computer science.
 </li>
 </ul>
 
-[USTC]: https://www.ustc.edu.cn
+[USTC]: https://en.ustc.edu.cn
