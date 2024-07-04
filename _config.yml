@@ -271,6 +271,7 @@ defaults:
       toc_sticky: true
       author_profile: true
       read_time: true
+      show_date: true
       comments: true
       share: false
       related: true
