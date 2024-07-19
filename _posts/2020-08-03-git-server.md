@@ -1,7 +1,7 @@
 ---
 title: 搭建一个 Git 服务器
 description: Setup a Git server with web interface and HTTP clone
-category: Server
+category: Tweaks
 tags: git gitweb nginx
 redirect_from: /r/7
 ---

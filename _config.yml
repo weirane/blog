@@ -11,7 +11,7 @@ locale: "zh-CN"  # "zh-CN"
 title: "weirane's blog"
 title_separator: "|"
 subtitle: # site tagline that appears below site title in masthead
-name: "Wang Ruochen"
+name: "Ruochen Wang"
 description: "weirane's blog"
 url: "https://blog.ruo-chen.wang"
 baseurl: ""
