@@ -3,8 +3,7 @@ title: About
 comments: true
 ---
 
-I am a CS master's student at UCSD. Before that I went to [USTC] and received a
-bacheler's degree in computer science.
+[HSY] → [USTC] → UCSD → GMU
 
 <ul class="fa-ul">
 <li>
@@ -18,4 +17,5 @@ bacheler's degree in computer science.
 </li>
 </ul>
 
+[HSY]: https://www.hzsdyfz.com.cn/
 [USTC]: https://en.ustc.edu.cn

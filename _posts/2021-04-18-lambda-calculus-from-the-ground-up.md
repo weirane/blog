@@ -7,7 +7,7 @@ redirect_from: /r/10
 ---
 
 这是我在看完 PyCon 2019 演讲「Lambda Calculus from the Ground Up」之后做的一个文
-字版，原视频在 <https://youtu.be/pkCLMl0e_0k>{:target="_blank"}。另见官网中的
+字版，原视频在 <https://youtu.be/pkCLMl0e_0k>{:.external}。另见官网中的
 [介绍][descpy]，这里提供一个翻译。
 
 > 最近关于编程风格的指南层出不穷。但是如果我们把风格限制为只允许出现单参数的函数
