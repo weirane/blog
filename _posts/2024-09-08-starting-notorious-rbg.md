@@ -2,7 +2,7 @@
 title: 开始读《异见时刻》
 description: Start reading Notorious RBG
 category: Humanities
-tags: 女性主义 RBG 中国哲学 金刚经
+tags: 读书 女性主义 RBG 中国哲学 金刚经
 redirect_from: /r/14
 toc: false
 ---
